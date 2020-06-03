@@ -16,11 +16,7 @@ public class PathSum {
         if (sum == 0 && node.left == null && node.right == null) {
             return true;
         }
-        if (!hasPathSumInternal(node.left, sum)) {
-            return hasPathSumInternal(node.right, sum);
-        } else {
-            return true;
-        }
+        return hasPathSumInternal(node.left, sum) || hasPathSumInternal(node.right, sum);
     }
 
     public static class TreeNode {

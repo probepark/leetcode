@@ -1,10 +1,12 @@
 package com.probeio.leetcode;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ToGoatLatinTest {
 
-    @org.junit.Test
+    @Test
     public void toGoatLatin() {
         ToGoatLatin toGoatLatin = new ToGoatLatin();
         long start = System.currentTimeMillis();

@@ -24,11 +24,11 @@ public class IntersectionOfTwoArrays2 {
                 .toArray();
     }
 
-    private Map<Integer, Long> toMap(int[] left) {
-        return Arrays.stream(left).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    private Map<Integer, Long> toMap(int[] array) {
+        return Arrays.stream(array).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
 
-    private IntStream multiply(Map<Integer, Long> rightMap, int value) {
-        return IntStream.range(0, rightMap.get(value).intValue()).map(operand -> value);
+    private IntStream multiply(Map<Integer, Long> map, int value) {
+        return IntStream.range(0, map.get(value).intValue()).map(operand -> value);
     }
 }

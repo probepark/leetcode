@@ -7,11 +7,10 @@ public class FindGreaterNumbers {
 
     public int findGreaterNumbers(int[] input) {
         return IntStream.range(0, input.length)
-                .map(index -> Arrays.stream(input)
+                .map(index -> (int) Arrays.stream(input)
                         .skip(index + 1)
                         .filter(value -> value > input[index])
-                        .map(value -> 1)
-                        .sum())
+                        .count())
                 .sum();
     }
 
